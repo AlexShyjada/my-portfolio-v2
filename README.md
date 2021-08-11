@@ -1,5 +1,6 @@
 ## My portfolio v2
 
+Esse projeto é o inicio da minha jornada como desenvolvedor de Vue. Consiste em uma área de serviços, portifólio, área sobre mim, formulario de contato e blog.
 
 ---
 
