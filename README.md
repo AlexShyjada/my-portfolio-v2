@@ -1,6 +1,5 @@
 ## My portfolio v2
 
-Objeto de estudos sobre criação de componentes no React. Meu desafio foi usar o conceito de JavaScript XML para criar componetes estáticos para a landing page especificada no link do [Protótipo](https://www.figma.com/file/XHUYZVQjNJHhWfB0gKa17H/Logo-Ipsum) usando a linguagem Typescript. Além disso, busquei treinar minhas habilidades fazendo o responsivo.
 
 ---
 
