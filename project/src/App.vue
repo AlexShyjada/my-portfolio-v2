@@ -1,15 +1,18 @@
 <template>
   <Header />
+  <Hero />
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 import Header from "./components/header/Header.vue";
+import Hero from "./components/hero/Hero.vue";
 
 export default defineComponent({
   name: "App",
   components: {
     Header,
+    Hero,
   },
 });
 </script>

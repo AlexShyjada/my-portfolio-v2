@@ -25,8 +25,14 @@ export default defineComponent({})
 .header {
   padding: 2rem;
   position: fixed;
+  top: 0;
   display: flex;
   width: 100%;
+  border-bottom: solid 2px #E7E7E7;
+  background-color: #FAFAFA77;
+  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px);
+  z-index: 100;
 }
 
 .nav{
