@@ -1,6 +1,6 @@
 <template>
   <header id="Header" class="header">
-    <div class="container">
+    <div class="contentHeader container">
       <img src="/assets/logo-AlexShyjada.svg" alt="" />
       <nav class="nav">
         <ul class="navLinks">
@@ -33,6 +33,11 @@ export default defineComponent({})
   -webkit-backdrop-filter: blur(25px);
   backdrop-filter: blur(25px);
   z-index: 100;
+}
+
+.contentHeader{
+  display : flex;
+  justify-content: space-between;
 }
 
 .nav{

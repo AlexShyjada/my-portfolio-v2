@@ -1,33 +1,36 @@
 <template>
   <Header />
   <Hero />
+  <History />
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import Header from "./components/header/Header.vue";
-import Hero from "./components/hero/Hero.vue";
+import { defineComponent } from 'vue'
+import Header from './components/header/Header.vue'
+import Hero from './components/hero/Hero.vue'
+import History from './components/about/History.vue'
 
 export default defineComponent({
-  name: "App",
+  name: 'App',
   components: {
     Header,
     Hero,
-  },
-});
+    History
+  }
+})
 </script>
 
 <style>
-:root{
+:root {
   --white: #fff;
-  --ice: #FAFAFA;
+  --ice: #fafafa;
   --dark-100: #040413;
   --dark-80: #090918;
-  --blue: #4070F4;
-  --green: #2BD67B;
+  --blue: #4070f4;
+  --green: #2bd67b;
 }
 
-*{
+* {
   margin: 0;
   box-sizing: border-box;
   padding: 0;
@@ -37,21 +40,19 @@ export default defineComponent({
   border-radius: 0;
 }
 
-html{
+html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
 
-body{
+body {
   font-family: 'Epilogue', sans-serif;
   font-size: 1.6rem;
-  background-color: var(--ice)
+  background-color: var(--ice);
 }
 
-.container{
+.container {
   margin: 0 auto;
   width: 1235px;
-  display: flex;
-  justify-content: space-between;
 }
 </style>
