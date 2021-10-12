@@ -14,7 +14,7 @@ Esse projeto é o inicio da minha jornada como desenvolvedor de Vue. Consiste em
 
 - [Atomic Design](https://bradfrost.com/)
 - [Nuxt.js](https://nuxtjs.org/)
-- [Sass](hhttps://sass-lang.com/)
+- [Sass](https://sass-lang.com/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Storyblok CMS](https://www.storyblok.com/?utm_source=google&utm_medium=cpc&utm_campaign=brnd&gclid=CjwKCAjwx8iIBhBwEiwA2quaq0GAmYGwkAgBSw4q_1iBr3-vcXLa4437mIpmEGPE1UwEp8pP7S7uvxoCEYsQAvD_BwE)
 
