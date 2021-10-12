@@ -1,28 +1,21 @@
 <template>
   <header id="Header" class="header">
     <div class="contentHeader container">
-      <img src="/assets/logo-AlexShyjada.svg" alt="" />
-      <nav class="nav">
-        <ul class="navLinks">
-          <li><a class="linkHeader" href="#">Inicio</a></li>
-          <li><a class="linkHeader" href="#">Sobre mim</a></li>
-          <li><a class="linkHeader" href="#">Portfólio</a></li>
-          <li><a class="linkHeader" href="#">Darkmode</a></li>
-        </ul>
+      <img src="/assets/logo-AlexShyjada.svg" alt="Logo Alexandre Shyjada"/>
+      <nav class="navLinks">
+        <a class="linkHeader" href="#">Inicio</a>
+        <a class="linkHeader" href="#">Sobre mim</a>
+        <a class="linkHeader" href="#">Portfólio</a>
+        <a class="linkHeader" href="#">Darkmode</a>
       </nav>
       <button class="btnHeader">Entrar em contato</button>
     </div>
   </header>
 </template>
 
-<script lang="ts">
-  import Vue from 'vue'
-  export default Vue.extend({})
-</script>
-
 <style scoped>
 
-  .header {
+  #Header {
     padding: 2rem;
     position: fixed;
     top: 0;

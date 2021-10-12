@@ -1,5 +1,5 @@
 {
-  "name": "teste",
+  "name": "alexshyjada",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -24,6 +24,8 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-vue": "^7.12.1",
-    "prettier": "^2.3.2"
+    "node-sass": "^6.0.1",
+    "prettier": "^2.3.2",
+    "sass-loader": "^10.1.1"
   }
 }
