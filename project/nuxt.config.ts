@@ -41,7 +41,9 @@ export default {
     ]
   },
 
-  css: [],
+  css: ['@/bosons/Global.scss', 'normalize.css/normalize.css'],
+
+  styleResources: {scss:[]},
 
   plugins: [],
 

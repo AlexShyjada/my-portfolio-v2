@@ -1,8 +1,19 @@
 <template>
   <main>
     <header id="Header" class="header">
-
+      <div class="container">
+        <img src="/assets/logo-AlexShyjada.svg" alt="Logo Alexandre Shyjada"/>
+        <nav class="navLinks">
+          <a class="linkHeader" href="#">Inicio</a>
+          <a class="linkHeader" href="#">Sobre mim</a>
+          <a class="linkHeader" href="#">Portfólio</a>
+          <a class="linkHeader" href="#">Darkmode</a>
+        </nav>
+        <button class="btnHeader">Entrar em contato</button>
+      </div>
     </header>
+
+    <Nuxt/>
 
     <footer>
       <p>Copyright © 2021 - Alguns direitos reservados a</p>
@@ -11,8 +22,8 @@
   </main>
 </template>
 
-<style >
-  .header {
+<style lang="scss">
+  #Header {
     padding: 2rem;
     position: fixed;
     top: 0;
