@@ -1,0 +1,56 @@
+<template>
+    <header id="Header" class="header">
+      <Container>
+        <Logo/>
+        <nav class="navLinks">
+          <a class="linkHeader" href="#">Inicio</a>
+          <a class="linkHeader" href="#">Sobre mim</a>
+          <a class="linkHeader" href="#">Portfólio</a>
+          <a class="linkHeader" href="#">Darkmode</a>
+        </nav>
+        <ButtonGradient>
+          Entrar em contato
+        </ButtonGradient>
+      </Container>
+    </header>
+</template>
+
+<style lang="scss" scoped>
+
+  #Header {
+    padding: 2rem;
+    position: fixed;
+    top: 0;
+    display: flex;
+    width: 100%;
+    border-bottom: solid 2px #E7E7E7;
+    background-color: #FAFAFA77;
+    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
+    z-index: 100;
+
+    .container{
+      display : flex;
+      align-items : center;
+      justify-content: space-between;
+
+      .navLinks{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+
+        .linkHeader{
+          display: block;
+          text-align: center;
+          color: var(--dark-base);
+          transition: 0.3s;
+        }
+
+        .linkHeader:hover{
+          color: var(--green);
+        }
+      }
+    }
+  }
+</style>

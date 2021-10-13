@@ -41,13 +41,13 @@ export default {
     ]
   },
 
-  css: ['@/bosons/Global.scss', 'normalize.css/normalize.css'],
+  css: ['normalize.css/normalize.css'],
 
   styleResources: {scss:[]},
 
   plugins: [],
 
-  components: true,
+  components: [{path: '@/components', pathPrefix: false}],
 
   buildModules: [
     '@nuxt/typescript-build',
