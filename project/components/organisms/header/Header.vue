@@ -1,7 +1,7 @@
 <template>
     <header id="Header" class="header">
       <Container>
-        <Logo/>
+        <LogoDark/>
         <nav class="navLinks">
           <a class="linkHeader" href="#">Inicio</a>
           <a class="linkHeader" href="#">Sobre mim</a>
@@ -9,7 +9,7 @@
           <a class="linkHeader" href="#">Darkmode</a>
         </nav>
         <ButtonGradient>
-          Entrar em contato
+          <a href="#">Entrar em contato</a> 
         </ButtonGradient>
       </Container>
     </header>

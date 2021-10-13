@@ -13,8 +13,13 @@
     background: rgb(43,214,123);
     background: linear-gradient(45deg, rgba(43,214,123,1) 0%, rgba(64,112,244,1) 100%);
     transition: 0.3s;
+    a{
+      color: var(--white-base);
+      display: block;
+      background: transparent;
+    }
   }
   .btnGrad:hover{
-    filter: contrast(120%);
+    filter: contrast(150%);
   }
 </style>
