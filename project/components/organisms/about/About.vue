@@ -33,7 +33,6 @@
 </template>
 
 <style lang="scss" scoped>
-
   #About{
     padding: 10rem 0;
     display: flex;
@@ -68,5 +67,4 @@
       }
     }
   }
-
 </style>

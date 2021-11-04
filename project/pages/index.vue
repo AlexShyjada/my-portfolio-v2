@@ -2,7 +2,8 @@
   <main>
     <Hero/>
     <About/>
-    <Experiences/>
     <Tools/>
+    <Experiences/>
+    <Portfolio/>
   </main>
 </template>

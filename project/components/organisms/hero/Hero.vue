@@ -21,10 +21,6 @@
   </section>
 </template>
 
-<script lang="ts">
-  export default {}
-</script>
-
 <style lang="scss" scoped>
   #Hero {
     margin-top: 8.8rem;

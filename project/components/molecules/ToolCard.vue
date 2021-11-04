@@ -20,20 +20,27 @@
 
 <style lang="scss" scoped>
   .articleTool{
+    min-width: 18.5rem;
     width: 18.5rem;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
-    gap: 6rem;
+    gap: 5rem;
     background-color: var(--white-base);
     padding: 3rem 1.5rem;
     img{
       width: max-content;
     }
     .textContainer{
+      height:9.8rem;
       display: flex;
       flex-direction: column;
+      justify-content: flex-end;
       gap: 1rem;
+      p{
+        font-size: 1.3rem;
+        line-height: 1.6rem
+      }
     }
   }
 </style>
