@@ -6,13 +6,12 @@
 </template>
 
 <script lang="ts">
-  import Vue from 'vue'
-  export default Vue.extend({
+  export default{
     props: {
       title: { type: String, required: true},
       description:{ type: String, required: true }
     }
-  })
+  }
 </script>
 
 <style scoped>

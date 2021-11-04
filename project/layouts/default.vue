@@ -16,7 +16,8 @@ export default Vue.extend({})
     --green: #2bd67b;
     --blue: #4070f4;
     --white-base: #ffffff;
-    --white-darkest: #fafafa;
+    --white-medium: #F7F7F7;
+    --white-darkest: #EDEDED;
     --dark-base: #040413;
     --dark-darkest: #090918;
   }
@@ -39,6 +40,6 @@ export default Vue.extend({})
   body {
     font-family: 'Epilogue', sans-serif;
     font-size: 1.6rem;
-    background-color: var(--ice);
+    background-color: var(--white-darkest);
   }
 </style>

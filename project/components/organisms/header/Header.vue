@@ -16,7 +16,6 @@
 </template>
 
 <style lang="scss" scoped>
-
   #Header {
     padding: 2rem;
     position: fixed;
@@ -24,7 +23,7 @@
     display: flex;
     width: 100%;
     border-bottom: solid 2px #E7E7E7;
-    background-color: #FAFAFA77;
+    background-color: #EDEDED77;
     -webkit-backdrop-filter: blur(25px);
     backdrop-filter: blur(25px);
     z-index: 100;

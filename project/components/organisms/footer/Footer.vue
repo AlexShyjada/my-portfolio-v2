@@ -8,14 +8,13 @@
 </template>
 
 <script lang="ts">
-  import Vue from 'vue'
-  export default Vue.extend({
+  export default{
     computed: {
       currentYear(){
         return new Date().getFullYear()
       }
     }
-  })
+  }
 </script>
 
 <style lang="scss" scoped>
