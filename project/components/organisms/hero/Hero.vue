@@ -5,8 +5,8 @@
         <Description>Alexandre Shyjada</Description>
         <MainTitle>Designer UI/UX e Desenvolvedor Web</MainTitle>
         <MainParagrath>
-          A sua disposição para desenvolver soluções em tecnologia que atendam as
-          necessidades de seu negócio
+          A disposição para desenvolver soluções em tecnologia que atendam as suas
+          necessidades!
         </MainParagrath>
         <div class="btnGroup">
           <ButtonGradient><a href="#">Entrar em contato</a></ButtonGradient>
