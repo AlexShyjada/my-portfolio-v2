@@ -15,7 +15,7 @@
         <ExperienceCard 
           img="/assets/logo-InfoJr.svg" 
           title="Info Jr UFBA" 
-          position="Instrutor de Design UI/UX - 2022.1"
+          position="Instrutor de Design UI/UX - 2020.2"
           paragrath="Empresa composta por estudantes de  graduação da Universidade Federal da Bahia."
         />
       </div>
@@ -30,7 +30,6 @@
       display: flex;
       flex-direction: column;
       gap: 6rem;
-
       .gridContainer{
         display: grid;
         grid-template-columns: repeat(2, 1fr);

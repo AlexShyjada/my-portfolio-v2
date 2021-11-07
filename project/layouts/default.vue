@@ -33,6 +33,7 @@
   }
 
   body {
+    overflow-x: hidden;
     font-family: 'Epilogue', sans-serif;
     font-size: 1.6rem;
     background-color: var(--white-darkest);

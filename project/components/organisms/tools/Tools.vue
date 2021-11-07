@@ -57,6 +57,14 @@
           description="Se você gosta de Sass você irá gostar de Styled Components 💅"
         />
       </div>
+        <div class="btnGroup">
+          <ButtonWhite>
+            Anterior
+          </ButtonWhite>
+          <ButtonGradient>
+            Próximo
+          </ButtonGradient>
+        </div>
     </Container>
   </section>
 </template>
@@ -72,7 +80,17 @@
         display: flex;
         flex-wrap: nowrap;
         gap: 2.5rem;
-        overflow-x: auto;
+      }
+      .btnGroup{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        .btnGrad{
+          width: 18.5rem;
+        }
+        .btnWhite{
+          width: 18.5rem;
+        }
       }
     }
   }

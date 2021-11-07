@@ -1,7 +1,7 @@
 <template>
   <footer id="Footer" class="footer">
     <Container>
-      <p>Copyright &copy; {{currentYear}} - Alguns direitos reservados a</p>
+      <p>Copyright &copy; {{currentYear}} - Todos os direitos reservados a</p>
       <LogoLight/>
     </Container>
   </footer>

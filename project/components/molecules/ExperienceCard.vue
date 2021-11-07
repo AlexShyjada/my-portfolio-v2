@@ -53,7 +53,7 @@
       gap:0.5rem;
 
       h3{
-        font-size: 22px;
+        font-size: 2.2rem;
         font-weight: 700;
         line-height: 33px;
         letter-spacing: 0em;
@@ -63,7 +63,7 @@
 
       span{
         font-style: italic;
-        font-size: 16px;
+        font-size: 1.6rem;
         font-style: italic;
         font-weight: 700;
         line-height: 24px;
@@ -73,7 +73,7 @@
       }
 
       p{
-        font-size: 16px;
+        font-size: 1.6rem;
         font-style: normal;
         font-weight: 400;
         line-height: 24px;

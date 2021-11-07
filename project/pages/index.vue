@@ -5,5 +5,6 @@
     <Tools/>
     <Experiences/>
     <Portfolio/>
+    <Contact/>
   </main>
 </template>
