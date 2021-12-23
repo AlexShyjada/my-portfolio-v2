@@ -7,13 +7,19 @@
       />
       <div class="gridContainer">
         <ExperienceCard 
-          img="/assets/logo-Saltur.svg" 
+          img="/assets/work-experience/logo-klutch.svg"
+          title="Klutch Tecnologia" 
+          position="Front-end intern - 2021.2"
+          paragrath="Software House focada em criação de sistemas web, criação de MVP e automatização de marketing."
+        />
+        <ExperienceCard 
+          img="/assets/work-experience/logo-Saltur.svg"
           title="SALTUR" 
           position="Ui Design &amp;	Front-end intern - 2021.1"
           paragrath="Estatal de turismo e eventos da Prefeitura Municipal de Salvador."
         />
         <ExperienceCard 
-          img="/assets/logo-InfoJr.svg" 
+          img="/assets/work-experience/logo-InfoJr.svg"
           title="Info Jr UFBA" 
           position="Instrutor de Design UI/UX - 2020.2"
           paragrath="Empresa composta por estudantes de  graduação da Universidade Federal da Bahia."

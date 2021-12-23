@@ -4,8 +4,9 @@
         <LogoDark/>
         <nav class="navLinks">
           <a class="linkHeader" href="#">Inicio</a>
-          <a class="linkHeader" href="#">Sobre mim</a>
-          <a class="linkHeader" href="#">Portfólio</a>
+          <a class="linkHeader" href="#About">Sobre mim</a>
+          <a class="linkHeader" href="#Portfolio">Portfólio</a>
+          <a class="linkHeader" href="#Contact">Contato</a>
           <a class="linkHeader" href="#">Darkmode</a>
         </nav>
         <ButtonGradient>

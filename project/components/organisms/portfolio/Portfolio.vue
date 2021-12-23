@@ -7,31 +7,31 @@
       />
       <div class="cardsContainer">
         <PortfolioCard
-          img="/assets/project-SurfSsa.png"
+          img="/assets/projects/project-SurfSsa.png"
           title="SurfSsa"
           description="Projeto construído para a SurfSsa, empresa de surf na capital Baiana."
           url="https://www.behance.net/gallery/119621147/Surf-Salvador"
         />
         <PortfolioCard
-          img="/assets/project-SurfSsa.png"
+          img="/assets/projects/project-SurfSsa.png"
           title="SurfSsa"
           description="Projeto construído para a SurfSsa, empresa de surf na capital Baiana."
           url="https://www.behance.net/gallery/119621147/Surf-Salvador"
         />
         <PortfolioCard
-          img="/assets/project-SurfSsa.png"
+          img="/assets/projects/project-SurfSsa.png"
           title="SurfSsa"
           description="Projeto construído para a SurfSsa, empresa de surf na capital Baiana."
           url="https://www.behance.net/gallery/119621147/Surf-Salvador"
         />
         <PortfolioCard
-          img="/assets/project-SurfSsa.png"
+          img="/assets/projects/project-SurfSsa.png"
           title="SurfSsa"
           description="Projeto construído para a SurfSsa, empresa de surf na capital Baiana."
           url="https://www.behance.net/gallery/119621147/Surf-Salvador"
         />
         <PortfolioCard
-          img="/assets/project-SurfSsa.png"
+          img="/assets/projects/project-SurfSsa.png"
           title="SurfSsa"
           description="Projeto construído para a SurfSsa, empresa de surf na capital Baiana."
           url="https://www.behance.net/gallery/119621147/Surf-Salvador"

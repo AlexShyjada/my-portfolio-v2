@@ -3,56 +3,66 @@
     <Container>
       <TitleGroup
         title="Minhas ferramentas"
-        description="Portfólio"
+        description="O que eu uso em meus projetos"
       />
       <div class="gridTools">
         <ToolCard
-          img="/assets/logo-Javascript.svg"
+          img="/assets/tools/logo-Javascript.svg"
           title="Javascript"
           description="É a base do desenvolvimento web sem ele nada existe!"
         />
         <ToolCard
-          img="/assets/logo-Typescript.svg"
+          img="/assets/tools/logo-Typescript.svg"
           title="Typescript"
           description="É o Javascript só que não aceita qualquer tipo de dado 🎲"
         />
         <ToolCard
-          img="/assets/logo-React.svg"
+          img="/assets/tools/logo-React.svg"
           title="React"
           description="Veio para mudar o conceito de aplicações web 💻"
         />
         <ToolCard
-          img="/assets/logo-Next.svg"
+          img="/assets/tools/logo-Next.svg"
           title="Next"
           description="Veio para mudar o conceito de aplicações web 💻"
         />
         <ToolCard
-          img="/assets/logo-Sass.svg"
+          img="/assets/tools/logo-Vue.svg"
+          title="Vue"
+          description="Veio para mudar o conceito de aplicações web 💻"
+        />
+        <ToolCard
+          img="/assets/tools/logo-Nuxt.svg"
+          title="Nuxt"
+          description="Veio para mudar o conceito de aplicações web 💻"
+        />
+        <ToolCard
+          img="/assets/tools/logo-Sass.svg"
           title="Sass"
           description="Css identado e com variáveis pode ser a melhor opção 🤔"
         />
         <ToolCard
-          img="/assets/logo-StyledComponents.svg"
+          img="/assets/tools/logo-StyledComponents.svg"
           title="Styled components"
           description="Se você gosta de Sass você irá gostar de Styled Components 💅"
         />
         <ToolCard
-          img="/assets/logo-TailwindCss.svg"
+          img="/assets/tools/logo-TailwindCss.svg"
           title="Tailwind css"
           description="Se você gosta de Sass você irá gostar de Styled Components 💅"
         />
         <ToolCard
-          img="/assets/logo-NetlifyCMS.svg"
+          img="/assets/tools/logo-NetlifyCMS.svg"
           title="Netlify CMS"
           description="Se você gosta de Sass você irá gostar de Styled Components 💅"
         />
         <ToolCard
-          img="/assets/logo-StoryblokCsm.svg"
+          img="/assets/tools/logo-StoryblokCsm.svg"
           title="Storyblok CMS"
           description="Se você gosta de Sass você irá gostar de Styled Components 💅"
         />
         <ToolCard
-          img="/assets/logo-Git.svg"
+          img="/assets/tools/logo-Git.svg"
           title="Git"
           description="Se você gosta de Sass você irá gostar de Styled Components 💅"
         />
