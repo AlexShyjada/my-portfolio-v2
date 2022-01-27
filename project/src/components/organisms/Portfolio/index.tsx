@@ -46,6 +46,8 @@ export function Portfolio() {
       .then((data) => setDribbbleProjects(data));
   }, [dribbble]);
 
+  console.log(dribbble)
+
   return (
     <StyledPortfolio>
       <Container>
