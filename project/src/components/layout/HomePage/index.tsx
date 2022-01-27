@@ -7,8 +7,8 @@ export function HomePage() {
     <>
       <Hero/>
       <SobreMim/>
-      <MinhasTecnologias/>
       <Portfolio/>
+      <MinhasTecnologias/>
       <ExperienciasProfissionais/>
       <Contato/>
     </>

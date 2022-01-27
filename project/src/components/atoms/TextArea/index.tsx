@@ -18,8 +18,8 @@ export function TextArea(props: iInputProps) {
         id={name}
         name={name}
         placeholder={placeholder}
-        maxLength={maxlength}
         minLength={minlength}
+        maxLength={maxlength}
       />
     </StyledTextArea>
   );
@@ -40,6 +40,8 @@ const StyledTextArea = styled.label<iStyledTextAreaProps>`
   line-height: 16px;
   color: var(--dark-100);
   textarea {
+    border-radius: 0.5rem;
+    resize: none;
     height: ${props =>  props.heigth};
     padding: 1.5rem 2.5rem;
     font-style: normal;
@@ -48,5 +50,11 @@ const StyledTextArea = styled.label<iStyledTextAreaProps>`
     line-height: 16px;
     color: #04041322;
     background-color: var(--white-80);
+    transition: 0.3s;
+    border:solid 2px var(--white-80);
+    &:focus{
+      outline: transparent;
+      border:solid 2px var(--green);
+    }
   }
 `;

@@ -8,26 +8,29 @@ interface iCardExperienceProps {
   title: string;
   subTitle: string;
   description: string;
+  href: string;
 }
 
 export function CardExperience(props: iCardExperienceProps) {
-  const { imgSRCLight, imgSRCDark, title, subTitle, description } = props;
+  const { imgSRCLight, imgSRCDark, title, subTitle, description, href } = props;
   return (
-    <StyledCardExperience>
-      <figure>
-        <Image
-          src={imgSRCLight}
-          alt={title}
-          layout="fill"
-          objectFit="contain"
-        />
-      </figure>
-      <div className="content">
-        <H3>{title}</H3>
-        <span className="subTitle">{subTitle}</span>
-        <p className="description">{description}</p>
-      </div>
-    </StyledCardExperience>
+    <a href={href} target="_blank" rel="noreferrer">
+      <StyledCardExperience>
+        <figure>
+          <Image
+            src={imgSRCLight}
+            alt={title}
+            layout="fill"
+            objectFit="contain"
+          />
+        </figure>
+        <div className="content">
+          <H3>{title}</H3>
+          <span className="subTitle">{subTitle}</span>
+          <p className="description">{description}</p>
+        </div>
+      </StyledCardExperience>
+    </a>
   );
 }
 
@@ -40,6 +43,8 @@ const StyledCardExperience = styled.div`
   gap: 2.5rem;
   border-radius: 2rem;
   background: var(--white-100);
+  border: solid 2px var(--white-100);
+  transition: 0.3s;
   figure {
     position: relative;
     min-height: 15rem;
@@ -64,5 +69,9 @@ const StyledCardExperience = styled.div`
       line-height: 25px;
       color: var(--dark-100);
     }
+  }
+  &:hover {
+    border: solid 2px var(--green);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   }
 `;

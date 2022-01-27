@@ -23,6 +23,7 @@ interface iStyledButtonWhiteProps {
 const StyledButtonWhite = styled.button<iStyledButtonWhiteProps>`
   a {
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 1rem;
     padding: 1.5rem 2rem;

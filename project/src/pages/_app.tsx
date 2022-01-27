@@ -13,7 +13,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 const GlobalStyle = createGlobalStyle`
 :root {
   --green: #2BD67B;
-  --blue: ##4070F4;
+  --blue: #4070F4;
   --dark-100: #040413;
   --dark-80: #090918;
   --white-100: #FFF;

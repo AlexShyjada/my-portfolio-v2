@@ -7,13 +7,13 @@ interface iH3Props {
 
 export function H3(props: iH3Props) {
   const { children } = props;
-  return <StyledH3>{children}</StyledH3>;
+  return <StyledH3 className="h3">{children}</StyledH3>;
 }
 
 const StyledH3 = styled.h3`
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
-  line-height: 16px;
-  color var(--dark-100);
+  line-height: 25px;
+  color: var(--dark-100);
 `;

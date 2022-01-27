@@ -64,8 +64,7 @@ export function Portfolio() {
                   imgSRC={card.images.hidpi}
                   title={card.title}
                   description={card.description}
-                  width={card.width}
-                  height={card.height}
+                  href={card.html_url}
                 />
               );
             })}
@@ -73,8 +72,8 @@ export function Portfolio() {
         </Container>
       </div>
       <Container>
-        <ButtonWhite>Anterior</ButtonWhite>
-        <ButtonDegrade>Próximo</ButtonDegrade>
+        <ButtonWhite width="185px">Anterior</ButtonWhite>
+        <ButtonDegrade width="185px">Próximo</ButtonDegrade>
       </Container>
     </StyledPortfolio>
   );
@@ -88,7 +87,18 @@ const StyledPortfolio = styled.section`
     display: flex;
     justify-content: space-between;
   }
+  .gridCardsContainer {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    .container{
+      display: block;
+      overflow: visible;
+      .gridCards {
+        display: flex;
+        flex-direction: row;
+        gap: 2.5rem;
+      }
+    }
+  }
 `;
-function useEfect(arg0: () => void, arg1: never[]) {
-  throw new Error("Function not implemented.");
-}

@@ -21,6 +21,7 @@ export function ExperienciasProfissionais() {
                 title={ExperienceCard.title}
                 subTitle={ExperienceCard.subTitle}
                 description={ExperienceCard.description}
+                href={ExperienceCard.href}
               />
             );
           })}

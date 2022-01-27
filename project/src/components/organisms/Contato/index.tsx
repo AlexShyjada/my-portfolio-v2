@@ -47,9 +47,9 @@ export function Contato() {
               label="Mensagem"
               name="mensagem"
               placeholder="Digite aqui sua mensagem"
-              maxlength={0}
-              minlength={0}
-              heigth={""}
+              minlength={100}
+              maxlength={700}
+              heigth={"150px"}
             />
             <ButtonDegrade width="100%">
               Enviar

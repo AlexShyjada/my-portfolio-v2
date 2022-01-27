@@ -27,12 +27,8 @@ export function MinhasTecnologias() {
         </Container>
       </div>
       <Container>
-        <ButtonWhite>
-          Anterior
-        </ButtonWhite>
-        <ButtonDegrade>
-          Próximo
-        </ButtonDegrade>
+        <ButtonWhite width="185px">Anterior</ButtonWhite>
+        <ButtonDegrade width="185px">Próximo</ButtonDegrade>
       </Container>
     </StyledMinhasTecnologias>
   );
