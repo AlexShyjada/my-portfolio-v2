@@ -1,21 +1,26 @@
 import { ReactNode } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 interface iButtonWhiteProps {
   children: ReactNode;
-  href: string;
+  href?: string;
+  width?: string;
 }
 
 export function ButtonWhite(props: iButtonWhiteProps) {
-  const { children, href } = props;
+  const { children, href, width } = props;
   return (
-    <StyledButtonWhite>
+    <StyledButtonWhite width={width}>
       <a href={href}>{children}</a>
     </StyledButtonWhite>
   );
 }
 
-const StyledButtonWhite = styled.button`
+interface iStyledButtonWhiteProps {
+  width?: string;
+}
+
+const StyledButtonWhite = styled.button<iStyledButtonWhiteProps>`
   a {
     display: flex;
     align-items: center;
@@ -23,7 +28,14 @@ const StyledButtonWhite = styled.button`
     padding: 1.5rem 2rem;
     border-radius: 0.5rem;
     border: 1px solid #09091833;
-    width: max-content;
+    ${props => props.width 
+      ? css`
+        width: ${props.width};
+      `
+      : css`
+        
+      `
+    }
     font-size: 1.4rem;
     color: var(--dark-100);
     background: var(--white-100);

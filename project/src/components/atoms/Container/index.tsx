@@ -7,7 +7,7 @@ interface iButtonWhiteProps {
 
 export function Container(props: iButtonWhiteProps) {
   const { children } = props;
-  return <StyledContainer>{children}</StyledContainer>;
+  return <StyledContainer className="container">{children}</StyledContainer>;
 }
 
 const StyledContainer = styled.div`

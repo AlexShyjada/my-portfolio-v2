@@ -13,7 +13,7 @@ export function Header() {
           <Link href="#Portfolio">Potifólio</Link>
           <ToogleSwitch>Dark Mode</ToogleSwitch>
         </nav>
-        <ButtonDegrade href="#Contact">
+        <ButtonDegrade href="#Contato">
           Entrar em contato
         </ButtonDegrade>
       </Container>

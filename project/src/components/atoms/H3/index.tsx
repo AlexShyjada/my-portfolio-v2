@@ -13,7 +13,7 @@ export function H3(props: iH3Props) {
 const StyledH3 = styled.h3`
   font-style: normal;
   font-weight: 600;
-  font-size: 40px;
-  line-height: 41px;
+  font-size: 18px;
+  line-height: 16px;
   color var(--dark-100);
 `;

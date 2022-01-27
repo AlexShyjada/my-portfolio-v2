@@ -5,7 +5,6 @@ import {
   Dispatch,
   SetStateAction,
 } from "react";
-
 interface iDrbbblbeAndDarkmodeContextProps {
   children: ReactNode;
 }
@@ -24,8 +23,11 @@ export function StateAndRequestContextProvider(
 ) {
   const { children } = props;
   const [darkMode, setDarkMode] = useState(false);
+
   return (
-    <DrbbblbeAndDarkmodeContext.Provider value={{ darkMode, setDarkMode }}>
+    <DrbbblbeAndDarkmodeContext.Provider
+      value={{ darkMode, setDarkMode }}
+    >
       {children}
     </DrbbblbeAndDarkmodeContext.Provider>
   );
