@@ -8,7 +8,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@netlify/plugin-nextjs": "4.2.0",
     "@types/axios": "^0.14.0",
     "@types/styled-components": "^5.1.19",
     "axios": "^0.24.0",

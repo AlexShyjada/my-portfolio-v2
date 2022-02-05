@@ -36,7 +36,7 @@ interface iDribbleProps {
 }
 
 export function Portfolio() {
-  const [dribbbleProjects, setDribbbleProjects] = useState<iDribbleProps[]>([]);
+  const [dribbbleProjects, setDribbbleProjects] = useState<iDribbleProps[] | undefined>([]);
 
   const dribbble = process.env.NEXT_PUBLIC_DRIBBBLE_URL as string;
 
@@ -46,7 +46,7 @@ export function Portfolio() {
       .then((data) => setDribbbleProjects(data));
   }, [dribbble]);
 
-  console.log(dribbble)
+  // console.log(dribbble)
 
   return (
     <StyledPortfolio>
@@ -59,7 +59,8 @@ export function Portfolio() {
       <div className="gridCardsContainer">
         <Container>
           <div className="gridCards">
-            {dribbbleProjects.map((card) => {
+          {dribbbleProjects &&
+            dribbbleProjects.map((card) => {
               return (
                 <CardPortfolio
                   key={card.id}
@@ -69,7 +70,8 @@ export function Portfolio() {
                   href={card.html_url}
                 />
               );
-            })}
+            })
+          }
           </div>
         </Container>
       </div>
