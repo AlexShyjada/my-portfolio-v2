@@ -3,7 +3,21 @@ import { CardExperience, Container } from "../..";
 import { TitleContainer } from "../../molecules/TitleContainer";
 import { ExperienceContent } from "./content";
 
-export function ExperienciasProfissionais() {
+type job = {
+  slug: string;
+  logo: string;
+  logoDark: string;
+  title: string;
+  duration: string;
+  description: string;
+};
+interface IExperienciasProfissionaisProps {
+  emprego: job[];
+}
+
+export function ExperienciasProfissionais({
+  emprego,
+}: IExperienciasProfissionaisProps) {
   return (
     <StyledExperienciasProfissionais>
       <Container>
@@ -12,16 +26,16 @@ export function ExperienciasProfissionais() {
           subTitle="Sobre minha jornada"
         />
         <div className="gridCards">
-          {ExperienceContent.map((ExperienceCard) => {
+          {emprego.map((ExperienceCard) => {
             return (
               <CardExperience
-                key={ExperienceCard.id}
-                imgSRCLight={ExperienceCard.imgSRCLight}
-                imgSRCDark={ExperienceCard.imgSRCDark}
+                key={ExperienceCard.slug}
+                imgSRCLight={ExperienceCard.logo}
+                imgSRCDark={ExperienceCard.logoDark}
                 title={ExperienceCard.title}
-                subTitle={ExperienceCard.subTitle}
+                subTitle={ExperienceCard.duration}
                 description={ExperienceCard.description}
-                href={ExperienceCard.href}
+                // href={ExperienceCard.href}
               />
             );
           })}

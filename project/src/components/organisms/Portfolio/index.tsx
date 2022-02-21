@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { GetStaticProps } from "next";
 import styled from "styled-components";
 import {
   ButtonDegrade,
@@ -8,46 +8,19 @@ import {
   TitleContainer,
 } from "../..";
 
-interface Images {
-  hidpi: string;
-  normal: string;
-  one_x: string;
-  two_x: string;
-  four_x: string;
-  teaser: string;
-}
-
-interface iDribbleProps {
-  animated: boolean;
-  description: string;
-  height: number;
-  html_url: string;
-  id: number;
-  images: Images;
-  low_profile: boolean;
-  tags: string[];
+type Portfolio = {
+  slug: string;
+  image: string;
   title: string;
-  width: number;
-  published_at: Date;
-  updated_at: Date;
-  attachments: any[];
-  projects: any[];
-  video?: any;
+  description: string;
+  linkDribbble: string;
+};
+
+interface IPortfolioProps {
+  portfolio: Portfolio[];
 }
 
-export function Portfolio() {
-  const [dribbbleProjects, setDribbbleProjects] = useState<iDribbleProps[] | undefined>([]);
-
-  const dribbble = process.env.NEXT_PUBLIC_DRIBBBLE_URL as string;
-
-  useEffect(() => {
-    fetch(dribbble)
-      .then((response) => response.json())
-      .then((data) => setDribbbleProjects(data));
-  }, [dribbble]);
-
-  console.log(dribbbleProjects)
-
+export function Portfolio({ portfolio }: IPortfolioProps) {
   return (
     <StyledPortfolio>
       <Container>
@@ -59,19 +32,15 @@ export function Portfolio() {
       <div className="gridCardsContainer">
         <Container>
           <div className="gridCards">
-          {dribbbleProjects &&
-            dribbbleProjects.map((card) => {
-              return (
-                <CardPortfolio
-                  key={card.id}
-                  imgSRC={card.images.hidpi}
-                  title={card.title}
-                  description={card.description}
-                  href={card.html_url}
-                />
-              );
-            })
-          }
+            {portfolio.map((card) => (
+              <CardPortfolio
+                key={card.slug}
+                imgSRC={card.image}
+                title={card.title}
+                description={card.description}
+                linkDribbble={card.linkDribbble}
+              />
+            ))}
           </div>
         </Container>
       </div>
@@ -95,7 +64,7 @@ const StyledPortfolio = styled.section`
     display: flex;
     flex-direction: row;
     overflow: hidden;
-    .container{
+    .container {
       display: block;
       overflow: visible;
       .gridCards {

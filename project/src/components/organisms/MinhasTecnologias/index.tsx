@@ -4,7 +4,17 @@ import { CardFerramentas } from "../../molecules/CardFerramentas";
 import { TitleContainer } from "../../molecules/TitleContainer";
 import { TechnologysContent } from "./content";
 
-export function MinhasTecnologias() {
+type techs = {
+  slug: string;
+  icon: string;
+  title: string;
+  description: string;
+};
+interface IMinhasTecnologiasProps {
+  techs: techs[]
+}
+
+export function MinhasTecnologias({techs}: IMinhasTecnologiasProps) {
   return (
     <StyledMinhasTecnologias>
       <Container>
@@ -13,11 +23,11 @@ export function MinhasTecnologias() {
       <div className="gridCardsContainer">
         <Container>
           <div className="gridCards">
-            {TechnologysContent.map((card) => {
+            {techs.map((card) => {
               return (
                 <CardFerramentas
-                  key={card.id}
-                  imgSRC={card.imgSRC}
+                  key={card.slug}
+                  imgSRC={card.icon}
                   title={card.title}
                   description={card.description}
                 />

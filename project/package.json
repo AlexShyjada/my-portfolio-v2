@@ -8,11 +8,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@prismicio/client": "^4.0.0",
     "@types/axios": "^0.14.0",
     "@types/styled-components": "^5.1.19",
     "axios": "^0.24.0",
     "miragejs": "^0.1.43",
     "next": "12.0.4",
+    "prismic-dom": "^2.2.7",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "sass": "^1.44.0",
@@ -20,6 +22,7 @@
   },
   "devDependencies": {
     "@types/node": "16.11.11",
+    "@types/prismic-dom": "^2.1.1",
     "@types/react": "^17.0.37",
     "eslint": "7",
     "eslint-config-next": "12.0.4",

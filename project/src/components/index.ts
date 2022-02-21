@@ -33,6 +33,3 @@ export * from './organisms/MinhasTecnologias'
 export * from './organisms/ExperienciasProfissionais'
 export * from './organisms/Contato'
 export * from './organisms/Footer'
-
-//Layouts
-export * from './layout/HomePage'

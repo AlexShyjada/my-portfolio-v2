@@ -6,11 +6,11 @@ interface iCardPortfolioProps {
   imgSRC: string;
   title: string;
   description: string;
-  href: string;
+  linkDribbble: string;
 }
 
 export function CardPortfolio(props: iCardPortfolioProps) {
-  const { imgSRC, title, description, href } = props;
+  const { imgSRC, title, description, linkDribbble } = props;
 
   return (
     <StyledCardPortfolio>
@@ -20,7 +20,7 @@ export function CardPortfolio(props: iCardPortfolioProps) {
       <div className="content">
         <H3>{title}</H3>
         <div className="description">{description}</div>
-        <a href={href} target="_blank" rel="noreferrer">
+        <a href={linkDribbble} target="_blank" rel="noreferrer">
           Saiba mais
           <svg
             width="14"
