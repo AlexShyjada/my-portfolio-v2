@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { CardExperience, Container } from "../..";
 import { TitleContainer } from "../../molecules/TitleContainer";
-import { ExperienceContent } from "./content";
 
 type job = {
   slug: string;
