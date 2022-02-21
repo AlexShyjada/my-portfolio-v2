@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { ButtonDegrade, ButtonWhite, Container } from "../..";
 import { CardFerramentas } from "../../molecules/CardFerramentas";
 import { TitleContainer } from "../../molecules/TitleContainer";
-import { TechnologysContent } from "./content";
 
 type techs = {
   slug: string;
