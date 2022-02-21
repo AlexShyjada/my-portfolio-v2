@@ -6,14 +6,15 @@ Esse projeto é basicamente um currículo online com todas as minhas experiencia
 
 ## Preview
 
-<p align="center"><img src="./project/preview.png" alt="preview"></p>
-<p align="center"><img src="./project/preview2.png" alt="preview"></p>
+<p align="center"><img src="./project/public/preview.png" alt="preview"></p>
+<p align="center"><img src="./project/public/preview2.png" alt="preview"></p>
 
 ---
 
 ## Tecnologias
 
 - [Atomic Design](https://bradfrost.com/)
+- [Prismic CMS](https://prismic.io/)
 - [Next.js](https://nextjs.org/)
 - [Styled Components](https://styled-components.com/)
 - [TypeScript](https://www.typescriptlang.org/)
