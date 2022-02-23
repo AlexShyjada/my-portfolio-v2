@@ -1,5 +1,6 @@
-import { ReactNode } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import { ReactNode, useContext } from "react";
+import { DarkmodeContext } from "../../context/DarkmodeContext";
 
 interface iLinkProps {
   children: ReactNode;
@@ -7,11 +8,17 @@ interface iLinkProps {
 }
 
 export function Link(props: iLinkProps) {
+  const { darkMode } = useContext(DarkmodeContext);
   const { children, href } = props;
-  return <StyledLink href={href}>{children}</StyledLink>;
+
+  return <StyledLink darkMode={darkMode} href={href}>{children}</StyledLink>;
 }
 
-const StyledLink = styled.a`
+interface iStyledLink {
+  darkMode: boolean;
+}
+
+const StyledLink = styled.a<iStyledLink>`
   width: max-content;
   display: flex;
   flex-direction: row;
@@ -23,7 +30,14 @@ const StyledLink = styled.a`
   line-height: 24px;
   font-weight: 400;
   letter-spacing: 0em;
-  color: var(--dark-80);
+  ${(props) =>
+    props.darkMode == true
+      ? css`
+          color: var(--white-80);
+        `
+      : css`
+          color: var(--dark-80);
+        `}
   transition: 0.3s;
   &:hover {
     color: var(--green);

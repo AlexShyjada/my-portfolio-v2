@@ -1,16 +1,26 @@
 import type { AppProps } from "next/app";
-import { createGlobalStyle } from "styled-components";
+import { useState } from "react";
+import { createGlobalStyle, css } from "styled-components";
+import { StateAndRequestContextProvider } from "../components/context/DarkmodeContext";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
+  const [darkMode, setDarkMode] = useState<boolean>(false);
   return (
-    <>
-      <GlobalStyle />
+    <StateAndRequestContextProvider
+      darkMode={darkMode}
+      setDarkMode={setDarkMode}
+    >
+      <GlobalStyle darkMode={darkMode} />
       <Component {...pageProps} />
-    </>
+    </StateAndRequestContextProvider>
   );
 }
 
-const GlobalStyle = createGlobalStyle`
+interface iGlobalStyle {
+  darkMode: boolean;
+}
+
+const GlobalStyle = createGlobalStyle<iGlobalStyle>`
 :root {
   --green: #2BD67B;
   --blue: #4070F4;
@@ -19,6 +29,7 @@ const GlobalStyle = createGlobalStyle`
   --white-100: #FFF;
   --white-80: #FAFAFA;
   --white-60: #EDEDED;
+  --white-30: #93939F;
   --degrade: linear-gradient(87.7deg, #2BD67B 0%, #4070F4 99.89%);
 }
 
@@ -39,7 +50,14 @@ html {
 
 body{
   font-size: 1.6rem;
-  background: var(--white-60);
+  ${(props) =>
+    props.darkMode
+      ? css`
+          background: var(--dark-100);
+        `
+      : css`
+          background: var(--white-60);
+        `}
 }
 
 a {

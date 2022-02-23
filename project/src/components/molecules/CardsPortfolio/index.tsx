@@ -1,6 +1,8 @@
 import Image from "next/image";
-import styled from "styled-components";
+import { useContext } from "react";
+import styled, { css } from "styled-components";
 import { H3 } from "../..";
+import { DarkmodeContext } from "../../context/DarkmodeContext";
 
 interface iCardPortfolioProps {
   imgSRC: string;
@@ -12,8 +14,10 @@ interface iCardPortfolioProps {
 export function CardPortfolio(props: iCardPortfolioProps) {
   const { imgSRC, title, description, linkDribbble } = props;
 
+  const { darkMode } = useContext(DarkmodeContext);
+
   return (
-    <StyledCardPortfolio>
+    <StyledCardPortfolio darkMode={darkMode}>
       <figure>
         <Image src={imgSRC} alt={title} layout="fill" objectFit="cover" />
       </figure>
@@ -50,7 +54,11 @@ export function CardPortfolio(props: iCardPortfolioProps) {
   );
 }
 
-const StyledCardPortfolio = styled.div`
+interface iStyledCardPortfolio {
+  darkMode: boolean;
+}
+
+const StyledCardPortfolio = styled.div<iStyledCardPortfolio>`
   height: 48.2rem;
   min-width: 39.5rem;
   display: flex;
@@ -60,7 +68,15 @@ const StyledCardPortfolio = styled.div`
   align-items: flex-start;
   border-radius: 1rem;
   overflow: hidden;
-  background: var(--white-100);
+  ${(props) =>
+    props.darkMode
+      ? css`
+          background: var(--dark-80);
+        `
+      : css`
+          background: var(--white-100);
+        `}
+
   figure {
     position: relative;
     height: 25rem;
@@ -88,11 +104,14 @@ const StyledCardPortfolio = styled.div`
       overflow: hidden;
       text-overflow: ellipsis;
       -webkit-line-clamp: 3;
-      p {
-        font-weight: 300;
-        font-size: 16px;
-        line-height: 25px;
-      }
+      ${(props) =>
+        props.darkMode
+          ? css`
+              color: var(--white-30);
+            `
+          : css`
+              color: var(--dark-80);
+            `}
     }
     a {
       width: max-content;
@@ -102,6 +121,14 @@ const StyledCardPortfolio = styled.div`
       font-weight: 700;
       margin-top: 1.5rem;
       transition: 0.3s;
+      ${(props) =>
+        props.darkMode
+          ? css`
+              color: var(--white-100);
+            `
+          : css`
+              color: var(--dark-80);
+            `}
       &:hover {
         color: var(--blue);
       }

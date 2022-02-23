@@ -1,5 +1,6 @@
-import { ReactNode } from "react";
-import styled from "styled-components";
+import { ReactNode, useContext } from "react";
+import styled, { css } from "styled-components";
+import { DarkmodeContext } from "../../context/DarkmodeContext";
 
 interface iParagrathProps {
   children: ReactNode;
@@ -7,13 +8,25 @@ interface iParagrathProps {
 
 export function Paragrath(props: iParagrathProps) {
   const { children } = props;
-  return <StyledParagrath>{children}</StyledParagrath>;
+  const { darkMode } = useContext(DarkmodeContext);
+  return <StyledParagrath darkMode={darkMode}>{children}</StyledParagrath>;
 }
 
-const StyledParagrath = styled.p`
+interface iStyledParagrath {
+  darkMode: boolean;
+}
+
+const StyledParagrath = styled.p<iStyledParagrath>`
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
   line-height: 33px;
-  color: var(--dark-100);
+  ${(props) =>
+    props.darkMode == true
+      ? css`
+          color: var(--white-30);
+        `
+      : css`
+          color: var(--dark-100);
+        `}
 `;

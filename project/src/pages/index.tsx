@@ -11,6 +11,8 @@ import {
 } from "../components";
 import { getPrismicClient } from "../services/prismic";
 import Prismic from "@prismicio/client";
+import { useState } from "react";
+import { StateAndRequestContextProvider } from "../components/context/DarkmodeContext";
 
 type Portfolio = {
   slug: string;
@@ -27,11 +29,11 @@ type techs = {
 };
 type job = {
   slug: string;
-  logo: string,
-  logoDark: string,
-  title: string,
-  duration: string,
-  description: string,
+  logo: string;
+  logoDark: string;
+  title: string;
+  duration: string;
+  description: string;
 };
 interface IHomeProps {
   portfolio: Portfolio[];
@@ -39,15 +41,15 @@ interface IHomeProps {
   emprego: job[];
 }
 
-export default function Home({ portfolio, technologys, emprego}: IHomeProps) {
+export default function Home({ portfolio, technologys, emprego }: IHomeProps) {
   return (
     <>
       <Header />
       <Hero />
       <SobreMim />
       <Portfolio portfolio={portfolio} />
-      <MinhasTecnologias techs={technologys}/>
-      <ExperienciasProfissionais emprego={emprego}/>
+      <MinhasTecnologias techs={technologys} />
+      <ExperienciasProfissionais emprego={emprego} />
       <Contato />
       <Footer />
     </>

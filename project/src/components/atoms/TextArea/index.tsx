@@ -1,4 +1,6 @@
-import styled from "styled-components";
+import { useContext } from "react";
+import styled, { css } from "styled-components";
+import { DarkmodeContext } from "../../context/DarkmodeContext";
 
 interface iInputProps {
   label: string;
@@ -10,9 +12,10 @@ interface iInputProps {
 }
 
 export function TextArea(props: iInputProps) {
+  const { darkMode } = useContext(DarkmodeContext);
   const { label, name, placeholder, minlength, maxlength, heigth } = props;
   return (
-    <StyledTextArea heigth={heigth}>
+    <StyledTextArea darkMode={darkMode} heigth={heigth}>
       {label}
       <textarea
         id={name}
@@ -27,6 +30,7 @@ export function TextArea(props: iInputProps) {
 
 interface iStyledTextAreaProps {
   heigth: string;
+  darkMode: boolean;
 }
 
 const StyledTextArea = styled.label<iStyledTextAreaProps>`
@@ -38,23 +42,39 @@ const StyledTextArea = styled.label<iStyledTextAreaProps>`
   font-weight: normal;
   font-size: 16px;
   line-height: 16px;
-  color: var(--dark-100);
+  ${(props) =>
+    props.darkMode == true
+      ? css`
+          color: var(--white-80);
+        `
+      : css`
+          color: var(--dark-100);
+        `}
   textarea {
     border-radius: 0.5rem;
     resize: none;
-    height: ${props =>  props.heigth};
+    height: ${(props) => props.heigth};
     padding: 1.5rem 2.5rem;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 16px;
-    color: #04041322;
-    background-color: var(--white-80);
+    ${(props) =>
+      props.darkMode == true
+        ? css`
+            color: #fafafa22;
+            border: solid 2px var(--dark-80);
+            background-color: var(--dark-80);
+          `
+        : css`
+            color: #04041322;
+            border: solid 2px var(--white-80);
+            background-color: var(--white-80);
+          `}
     transition: 0.3s;
-    border:solid 2px var(--white-80);
-    &:focus{
+    &:focus {
       outline: transparent;
-      border:solid 2px var(--green);
+      border: solid 2px var(--green);
     }
   }
 `;

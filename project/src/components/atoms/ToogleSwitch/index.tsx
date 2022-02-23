@@ -1,25 +1,32 @@
-import { ReactNode } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import { ReactNode, useContext } from "react";
+import { DarkmodeContext } from "../../context/DarkmodeContext";
 
 interface iToogleSwitch {
   children: ReactNode;
+  onChange: () => void;
 }
 
 export function ToogleSwitch(props: iToogleSwitch) {
-  const { children } = props;
+  const { children, onChange } = props;
+  const { darkMode } = useContext(DarkmodeContext);
 
   return (
-    <StyledToogleSwtch>
+    <StyledToogleSwtch darkMode={darkMode}>
       <span className="textSwitch">{children}</span>
       <div className="switchWrapper">
-        <input className="checkBox" type="checkbox" />
+        <input className="checkBox" type="checkbox" onChange={onChange} />
         <span className="switchButton light"></span>
       </div>
     </StyledToogleSwtch>
   );
 }
 
-const StyledToogleSwtch = styled.label`
+interface iStyledToogleSwtch {
+  darkMode: boolean;
+}
+
+const StyledToogleSwtch = styled.label<iStyledToogleSwtch>`
   width: max-content;
   cursor: pointer;
   display: flex;
@@ -28,7 +35,14 @@ const StyledToogleSwtch = styled.label`
   justify-content: center;
 
   span {
-    color: var(--dark-100);
+    ${(props) =>
+      props.darkMode == true
+        ? css`
+            color: var(--white-80);
+          `
+        : css`
+            color: var(--dark-100);
+          `}
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -58,6 +72,14 @@ const StyledToogleSwtch = styled.label`
       align-items: center;
       border-radius: 40px;
       background-color: #09091811;
+      ${(props) =>
+        props.darkMode == true
+          ? css`
+              color: #fafafa11;
+            `
+          : css`
+              color: #09091811;
+            `}
     }
 
     span::before {
@@ -69,11 +91,18 @@ const StyledToogleSwtch = styled.label`
       bottom: 0;
       border-radius: 50%;
       transition: 0.3s all ease;
-      background-color: var(--dark-100);
+      ${(props) =>
+        props.darkMode == true
+          ? css`
+              background-color: var(--white-80);
+            `
+          : css`
+              background-color: var(--dark-100);
+            `}
+    }
     }
 
     input:checked + .switchButton::before {
       transform: translateX(15px);
     }
-  }
 `;

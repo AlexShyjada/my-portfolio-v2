@@ -1,16 +1,22 @@
-import { ReactNode } from "react";
-import styled from "styled-components";
+import { ReactNode, useContext } from "react";
+import styled, { css } from "styled-components";
+import { DarkmodeContext } from "../../context/DarkmodeContext";
 
 interface iSpanText {
   children: ReactNode;
 }
 
 export function SpanTextLight(props: iSpanText) {
+  const { darkMode } = useContext(DarkmodeContext);
   const { children } = props;
-  return <StyledSpanText>{children}</StyledSpanText>;
+  return <StyledSpanText darkMode={darkMode}>{children}</StyledSpanText>;
 }
 
-const StyledSpanText = styled.span`
+interface iStyledSpanText {
+  darkMode: boolean;
+}
+
+const StyledSpanText = styled.span<iStyledSpanText>`
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -18,5 +24,12 @@ const StyledSpanText = styled.span`
   font-weight: normal;
   font-size: 20px;
   line-height: 35px;
-  color: var(--white-100);
+  ${(props) =>
+    props.darkMode == true
+      ? css`
+          color: var(--dark-80);
+        `
+      : css`
+          color: var(--white-100);
+        `}
 `;

@@ -1,6 +1,8 @@
 import Image from "next/image";
-import styled from "styled-components";
+import { useContext } from "react";
+import styled, { css } from "styled-components";
 import { H3 } from "../..";
+import { DarkmodeContext } from "../../context/DarkmodeContext";
 
 interface iCardExperienceProps {
   imgSRCLight: string;
@@ -12,15 +14,29 @@ interface iCardExperienceProps {
 
 export function CardExperience(props: iCardExperienceProps) {
   const { imgSRCLight, imgSRCDark, title, subTitle, description } = props;
+  const { darkMode } = useContext(DarkmodeContext);
   return (
-    <StyledCardExperience>
+    <StyledCardExperience darkMode={darkMode}>
       <figure>
-        <Image
-          src={imgSRCLight}
-          alt={title}
-          layout="fill"
-          objectFit="contain"
-        />
+        {darkMode ? (
+          <>
+            <Image
+              src={imgSRCDark}
+              alt={title}
+              layout="fill"
+              objectFit="contain"
+            />
+          </>
+        ) : (
+          <>
+            <Image
+              src={imgSRCLight}
+              alt={title}
+              layout="fill"
+              objectFit="contain"
+            />
+          </>
+        )}
       </figure>
       <div className="content">
         <H3>{title}</H3>
@@ -31,7 +47,11 @@ export function CardExperience(props: iCardExperienceProps) {
   );
 }
 
-const StyledCardExperience = styled.div`
+interface iStyledCardExperience {
+  darkMode: boolean;
+}
+
+const StyledCardExperience = styled.div<iStyledCardExperience>`
   width: 100%;
   padding: 2.5rem;
   display: flex;
@@ -39,8 +59,16 @@ const StyledCardExperience = styled.div`
   align-items: center;
   gap: 2.5rem;
   border-radius: 2rem;
-  background: var(--white-100);
-  border: solid 2px var(--white-100);
+  ${(props) =>
+    props.darkMode
+      ? css`
+          background: var(--dark-80);
+          border: solid 2px var(--dark-80);
+        `
+      : css`
+          background: var(--white-100);
+          border: solid 2px var(--white-100);
+        `}
   transition: 0.3s;
   figure {
     position: relative;
@@ -57,14 +85,28 @@ const StyledCardExperience = styled.div`
       font-weight: normal;
       font-size: 16px;
       line-height: 24px;
-      color: var(--dark-100);
+      ${(props) =>
+        props.darkMode
+          ? css`
+              color: var(--white-60);
+            `
+          : css`
+              color: var(--dark-100);
+            `}
     }
     .description {
       font-style: normal;
       font-weight: 500;
       font-size: 16px;
       line-height: 25px;
-      color: var(--dark-100);
+      ${(props) =>
+        props.darkMode
+          ? css`
+              color: var(--white-30);
+            `
+          : css`
+              color: var(--dark-100);
+            `}
     }
   }
 `;

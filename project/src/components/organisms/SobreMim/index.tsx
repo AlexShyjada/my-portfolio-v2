@@ -1,11 +1,14 @@
 import Image from "next/image";
-import styled from "styled-components";
+import { useContext } from "react";
+import styled, { css } from "styled-components";
 import { Container, Paragrath } from "../..";
+import { DarkmodeContext } from "../../context/DarkmodeContext";
 import { TitleContainer } from "../../molecules/TitleContainer";
 
 export function SobreMim() {
+  const { darkMode } = useContext(DarkmodeContext);
   return (
-    <StyledSobreMim id="SobreMim">
+    <StyledSobreMim darkMode={darkMode} id="SobreMim">
       <Container>
         <TitleContainer
           title="Um pouco da minha história"
@@ -39,7 +42,11 @@ export function SobreMim() {
   );
 }
 
-const StyledSobreMim = styled.section`
+interface iStyledSobreMim {
+  darkMode: boolean;
+}
+
+const StyledSobreMim = styled.section<iStyledSobreMim>`
   padding: 8rem 0;
   .container {
     display: flex;
@@ -61,17 +68,31 @@ const StyledSobreMim = styled.section`
           font-weight: 600;
           font-size: 22px;
           line-height: 23px;
-          color var(--dark-100);
+          ${(props) =>
+            props.darkMode
+              ? css`
+                  color: var(--white-100);
+                `
+              : css`
+                  color: var(--dark-100);
+                `}
         }
-        cite{
+        cite {
           font-style: italic;
           font-weight: normal;
           font-size: 18px;
           line-height: 33px;
-          color var(--dark-100);
           opacity: 50%;
+          ${(props) =>
+            props.darkMode
+            ? css`
+                  color: var(--white-30);
+                  `
+              : css`
+                color: var(--dark-100);
+                `}
+        }
         }
       }
     }
-  }
 `;

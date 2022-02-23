@@ -1,15 +1,19 @@
+import { useContext } from "react";
 import styled from "styled-components";
 import {
   ButtonDegrade,
   ButtonWhite,
   Container,
   H1,
+  ImgHeroDark,
   ImgHeroLight,
   SpanTextDark,
   UpercaseText,
 } from "../..";
+import { DarkmodeContext } from "../../context/DarkmodeContext";
 
 export function Hero() {
+  const { darkMode } = useContext(DarkmodeContext);
   return (
     <StyledHero id="Hero">
       <Container>
@@ -27,7 +31,15 @@ export function Hero() {
             </ButtonWhite>
           </div>
         </aside>
-        <ImgHeroLight />
+        {darkMode ? (
+          <>
+            <ImgHeroDark />
+          </>
+        ) : (
+          <>
+            <ImgHeroLight />
+          </>
+        )}
       </Container>
     </StyledHero>
   );
@@ -46,7 +58,7 @@ const StyledHero = styled.section`
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
-      .buttonGroup{
+      .buttonGroup {
         display: flex;
         justify-content: flex-start;
         gap: 2.5rem;
