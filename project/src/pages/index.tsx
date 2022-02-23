@@ -135,5 +135,6 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: { portfolio, technologys, emprego },
+    revalidate: 86400
   };
 };
