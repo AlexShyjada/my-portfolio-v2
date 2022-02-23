@@ -24,7 +24,7 @@ export function Header() {
           </>
         )}
         <nav>
-          <Link href="#Hero">Início</Link>
+          <Link href="/">Início</Link>
           <Link href="#SobreMim">Sobre mim</Link>
           <Link href="#Portfolio">Potifólio</Link>
           <ToogleSwitch onChange={handleChangeDarkMode}>Dark Mode</ToogleSwitch>

@@ -11,8 +11,6 @@ import {
 } from "../components";
 import { getPrismicClient } from "../services/prismic";
 import Prismic from "@prismicio/client";
-import { useState } from "react";
-import { StateAndRequestContextProvider } from "../components/context/DarkmodeContext";
 
 type Portfolio = {
   slug: string;
@@ -62,6 +60,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const responsePortifolio = await prismic.query(
     [Prismic.predicates.at("document.type", "portfolio")],
     {
+      orderings: "[document.first_publication_date desc]",
       fetch: [
         "portfolio.title",
         "portfolio.description",
@@ -75,10 +74,13 @@ export const getStaticProps: GetStaticProps = async () => {
   const responseTechnologys = await prismic.query(
     [Prismic.predicates.at("document.type", "technologys")],
     {
+      orderings: "[document.first_publication_date]",
       fetch: [
+        "document.first_publication_date",
         "technologys.title",
         "technologys.description",
         "technologys.icon",
+        "desc",
       ],
       pageSize: 100,
     }
@@ -87,12 +89,15 @@ export const getStaticProps: GetStaticProps = async () => {
   const responseEmprego = await prismic.query(
     [Prismic.predicates.at("document.type", "job")],
     {
+      orderings: "[document.first_publication_date desc]",
       fetch: [
+        "document.first_publication_date",
         "job.title",
         "job.duration",
         "job.description",
         "job.image",
         "job.image_dark",
+        "desc",
       ],
       pageSize: 100,
     }

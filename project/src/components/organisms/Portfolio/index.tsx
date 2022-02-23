@@ -1,4 +1,3 @@
-import { GetStaticProps } from "next";
 import styled from "styled-components";
 import {
   ButtonDegrade,
