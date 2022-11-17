@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
-module.exports = {
+const nextConfig = {
   reactStrictMode: true,
-  images: {
-    domains: ['cdn.dribbble.com', 'images.prismic.io', 'my-portfolio-v2.cdn.prismic.io'],
-  },
+  swcMinify: true,
 }
+
+module.exports = nextConfig
