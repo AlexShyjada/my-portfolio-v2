@@ -2,9 +2,6 @@ import Link from "next/link";
 import { Chats } from "phosphor-react";
 import { Button, Container, Navlink, StyledHeader } from "./styles";
 
-
-
-
 export function Header() {
   return (
     <StyledHeader>

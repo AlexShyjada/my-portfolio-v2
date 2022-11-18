@@ -1,6 +1,6 @@
 import { Header, Hero, Servicos, Portfolio, SobreMim } from "../components";
 
-export function Home() {
+export default function Home() {
   return (
     <>
       <Header />

@@ -11,4 +11,10 @@ export const MainInofrmationContainer = styled('article', {})
 
 export const TextContainer = styled('aside', {})
 
-export const PhotosContainer = styled('div', {})
+export const PhotosContainer = styled('div', {
+  figure: {
+    position: 'relative',
+    width: '428px',
+    height: '571px',
+  }
+})

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight } from 'phosphor-react';
+import { ArrowRight, ArrowUpRight } from "phosphor-react";
 import {
   StyledCardPortfolio,
   StyledHeaderPortifolio,
@@ -31,7 +31,7 @@ export function Portfolio() {
         <StyledPortifólioList>
           {portifolioCardsInformation.map((card) => (
             <li key={card.id}>
-              <StyledCardPortfolio >
+              <StyledCardPortfolio>
                 <figure className="imageContainer">
                   <Image
                     src={card.imageURL}
@@ -48,7 +48,7 @@ export function Portfolio() {
                   <Link href={card.link} legacyBehavior target="_blank">
                     <a className="cardLink">
                       Saiba Mais
-                      <ArrowRight size={20} weight="bold"/>
+                      <ArrowRight size={20} weight="bold" />
                     </a>
                   </Link>
                 </div>
