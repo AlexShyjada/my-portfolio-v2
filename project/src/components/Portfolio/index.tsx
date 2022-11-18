@@ -9,7 +9,7 @@ import {
 import { portifolioCardsInformation } from "./content";
 import Image from "next/image";
 
-export default function Portfolio() {
+export function Portfolio() {
   return (
     <StyledPortfolio id="Portifolio">
       <div className="container">

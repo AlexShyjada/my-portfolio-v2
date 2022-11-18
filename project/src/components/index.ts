@@ -1,3 +1,5 @@
 export * from './Header'
 export * from './Hero'
 export * from './Servicos'
+export * from './Portfolio'
+export * from './SobreMim'
