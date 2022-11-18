@@ -1,15 +1,13 @@
-import {Header, Hero, Servicos} from "../components";
-import Portfolio from "../components/Portifolio";
-import SobreMim from "../components/SobreMim";
+import { Header, Hero, Servicos, Portfolio, SobreMim } from "../components";
 
 export function Home() {
   return (
     <>
-      <Header/>
-      <Hero/>
-      <Servicos/>
-      <Portfolio/>
-      <SobreMim/>
+      <Header />
+      <Hero />
+      <Servicos />
+      <Portfolio />
+      <SobreMim />
     </>
-  )
+  );
 }
