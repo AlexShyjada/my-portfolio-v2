@@ -1,4 +1,4 @@
-import { keyframes, styled } from "@stitches/react";
+import { keyframes, styled } from "../../../styles";
 
 export const shake = keyframes({
   '0%': {
@@ -192,7 +192,7 @@ export const StyledHeroFooter = styled('footer', {
     display: "flex",
     alignItems: "center",
     gap: '1rem',
-    animation: `28s ${translateX} infinite alternate linear`,
+    animation: `50s ${translateX} infinite alternate linear`,
     h2: {
       whiteSpace: "nowrap",
       display: "flex",

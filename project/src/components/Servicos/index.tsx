@@ -6,7 +6,7 @@ import {
   StyledListContainer,
   StyledServicos,
   StyledTitleContainer,
-} from "./styled";
+} from "./styles";
 
 export function Servicos() {
   return (
@@ -27,15 +27,15 @@ export function Servicos() {
           </StyledTitleContainer>
 
           <StyledListContainer className="listContainer">
-            <li className="listItem">
+            <li className="listItem ">
               <Check size={32} color="#0061EA" weight="bold" />
               Interfaces modernas e cleans
             </li>
-            <li className="listItem">
+            <li className="listItem ">
               <Check size={32} color="#0061EA" weight="bold" />
               Mais valor agregado ao seu produto/serviço
             </li>
-            <li className="listItem">
+            <li className="listItem ">
               <Check size={32} color="#0061EA" weight="bold" />
               Maior retorno e crescimento de seu negocio
             </li>

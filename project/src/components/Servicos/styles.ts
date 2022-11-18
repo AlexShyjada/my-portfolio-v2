@@ -1,4 +1,4 @@
-import { keyframes, styled } from "@stitches/react";
+import { keyframes, styled } from "../../../styles";
 
 export const translateIconY = keyframes({
   '0%': {
@@ -6,7 +6,7 @@ export const translateIconY = keyframes({
   },
 
   '50%': {
-    transform: 'translateY(8px)',
+    transform: 'translateY(-8px)',
   },
 
   '100%': {
@@ -101,6 +101,7 @@ export const ServicesList = styled("ul", {
     gap: "1rem",
     padding: "3rem 1.5rem",
     borderRadius: "0.5rem",
+
     transition: '0.3s',
     backgroundColor: "$base700",
 

@@ -527,7 +527,7 @@ export function Hero() {
             <Image src="/heroFooter/and.svg" width={35} height={35} alt="happy Emoji" />
           </h2>
           <h2>
-            Sistemas Web
+            Sistemas
             <Image src="/heroFooter/hangloose.svg" width={31} height={31} alt="happy Emoji" />
           </h2>
           <h2>
@@ -543,10 +543,11 @@ export function Hero() {
             <Image src="/heroFooter/and.svg" width={35} height={35} alt="happy Emoji" />
           </h2>
           <h2>
-            Sistemas Web
+            Sistemas
             <Image src="/heroFooter/hangloose.svg" width={31} height={31} alt="happy Emoji" />
           </h2>
         </div>
+
         <div className="contentContainer">
           <h2>
             Websites
@@ -561,7 +562,7 @@ export function Hero() {
             <Image src="/heroFooter/and.svg" width={35} height={35} alt="happy Emoji" />
           </h2>
           <h2>
-            Sistemas Web
+            Sistemas
             <Image src="/heroFooter/hangloose.svg" width={31}height={31} alt="happy Emoji" />
           </h2>
           <h2>
@@ -577,7 +578,7 @@ export function Hero() {
             <Image src="/heroFooter/and.svg" width={35} height={35} alt="happy Emoji" />
           </h2>
           <h2>
-            Sistemas Web
+            Sistemas
             <Image src="/heroFooter/hangloose.svg" width={31}height={31} alt="happy Emoji" />
           </h2>
         </div>
