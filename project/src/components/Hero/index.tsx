@@ -13,7 +13,7 @@ import {
 export function Hero() {
   return (
     <>
-      <StyledHero>
+      <StyledHero id="Inicio">
         <div className="container">
           <StyledTextContainer className="textContainer">
             <span className="hellow">

@@ -45,8 +45,8 @@ export function Portfolio() {
                     <span className="postDescription">{card.description}</span>
                   </div>
 
-                  <Link href={card.link} legacyBehavior target="_blank">
-                    <a className="cardLink">
+                  <Link href={card.link} legacyBehavior>
+                    <a target="_blank" className="cardLink">
                       Saiba Mais
                       <ArrowRight size={20} weight="bold" />
                     </a>

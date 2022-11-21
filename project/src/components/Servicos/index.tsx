@@ -10,7 +10,7 @@ import {
 
 export function Servicos() {
   return (
-    <StyledServicos>
+    <StyledServicos id='Servicos'>
       <div className="container">
         <StyledHeder>
           <StyledTitleContainer className="titleContainer">
@@ -19,10 +19,8 @@ export function Servicos() {
               <h2 className="secundaryTitle">Serviços</h2>
             </div>
             <p className="description">
-              Sou focado no design de interfaces digitais para sites e
-              aplicativos. Projeto sempre tendo em vista a melhor experiência do
-              usuário, alinhada com um bom visual e o propósito/objetivo do
-              projeto.
+              Sou focado no design de interfaces para sites, aplicativos e
+              sistemas de gesrenciamento.
             </p>
           </StyledTitleContainer>
 
@@ -56,7 +54,11 @@ export function Servicos() {
                 alt="Design de Aplicativos"
               />
             </figure>
-            <h3>Design de<br/>interfaces web</h3>
+            <h3>
+              Design de
+              <br />
+              interfaces web
+            </h3>
             <span>
               Interfaces para websites que funcionam em qualquer dispositivo,
               focado em seu público e forte apelo visual.
@@ -71,10 +73,14 @@ export function Servicos() {
                 alt="Design de Aplicativos"
               />
             </figure>
-            <h3>Design de<br/>interfaces mobile</h3>
+            <h3>
+              Design de
+              <br />
+              interfaces mobile
+            </h3>
             <span>
-              Interfaces para websites que funcionam em qualquer dispositivo,
-              focado em seu público e forte apelo visual.
+              Prototipação de interfaces para aplicativos, com foco em
+              usabilidade e objetivos de seu negocio.
             </span>
           </li>
           <li className="serviceCard">
@@ -86,7 +92,11 @@ export function Servicos() {
                 alt="Desenvolvimento de Website"
               />
             </figure>
-            <h3>Desenvolvimento<br/>de websites</h3>
+            <h3>
+              Desenvolvimento
+              <br />
+              de websites
+            </h3>
             <span>
               Implementação sem templates ou modelos prontos. Garantindo a
               qualidade e atenção aos detalhes da interface.

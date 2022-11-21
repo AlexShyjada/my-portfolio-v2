@@ -69,7 +69,7 @@ export function Header() {
         </svg>
 
         <nav className="linksContainer">
-          <Link href="/#Hero" legacyBehavior>
+          <Link href="/#Inicio" legacyBehavior>
             <Navlink className="navLink">Início</Navlink>
           </Link>
 
@@ -82,7 +82,7 @@ export function Header() {
           </Link>
 
           <Link href="/#SobreMim" legacyBehavior>
-            <Navlink className="navLink">Serviços</Navlink>
+            <Navlink className="navLink">Potifólio</Navlink>
           </Link>
 
           <Button className="contactButton">
