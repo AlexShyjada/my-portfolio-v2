@@ -80,8 +80,8 @@ export const myLifePhotos = <IMyLifePhotosProps[]>[
   {
     id: 11,
     alt: "Foto com eu e minhas irmãs menores",
-    height: 323,
-    width: 243,
+    height: 269,
+    width: 359,
     src: '/meAndMayLittleSisters.png',
   },
   {
@@ -122,8 +122,8 @@ export const myLifePhotos = <IMyLifePhotosProps[]>[
   {
     id: 17,
     alt: "Foto com eu e minhas irmãs menores",
-    height: 323,
-    width: 243,
+    height: 269,
+    width: 359,
     src: '/meAndMayLittleSisters.png',
   },
   {
