@@ -1,18 +1,18 @@
 import { keyframes, styled } from "../../../styles";
 
 export const translateIconY = keyframes({
-  '0%': {
-    transform: 'translateY(0)',
+  "0%": {
+    transform: "translateY(0)",
   },
 
-  '50%': {
-    transform: 'translateY(-8px)',
+  "50%": {
+    transform: "translateY(-8px)",
   },
 
-  '100%': {
-    transform: 'translateY(0)',
-  }
-})
+  "100%": {
+    transform: "translateY(0)",
+  },
+});
 
 export const StyledServicos = styled("section", {
   display: "flex",
@@ -50,24 +50,24 @@ export const StyledTitleContainer = styled("li", {
     flexDirection: "column",
     gap: "0.25rem",
     "span.subtitle": {
-      fontWeight: "500",
-      fontSize: "16px",
+      fontWeight: "$medium",
+      fontSize: "$body1",
       lineHeight: "32px",
       letterSpacing: "2.2px",
       textTransform: "uppercase",
       color: "$base400",
     },
     "h2.secundaryTitle": {
-      fontWeight: "700",
-      fontSize: "3rem",
+      fontWeight: "$bold",
+      fontSize: "$h1",
       lineHeight: "4rem",
       color: "$base100",
     },
   },
 
   "p.description": {
-    fontWeight: "400",
-    fontSize: "1rem",
+    fontWeight: "$regular",
+    fontSize: "$body1",
     lineHeight: "1.5rem",
     letterSpacing: "0.2px",
     color: "$base100",
@@ -102,19 +102,19 @@ export const ServicesList = styled("ul", {
     padding: "3rem 1.5rem",
     borderRadius: "0.5rem",
 
-    transition: '0.3s',
+    transition: "0.3s",
     backgroundColor: "$base700",
 
     figure: {
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
       heigth: "80px",
     },
 
     h3: {
       fontWeight: "$bold",
-      fontSize: "1.5rem",
+      fontSize: "$h3",
       lineHeight: "2rem",
       textAlign: "center",
       color: "$base100",
@@ -122,21 +122,41 @@ export const ServicesList = styled("ul", {
 
     span: {
       fontWeight: "$regular",
-      fontSize: "1rem",
+      fontSize: "$body1",
       lineHeight: "1.5rem",
       textAlign: "center",
       letterSpacing: "0.2px",
       color: "$base100",
     },
 
-    '&:hover': {
-      cursor: 'pointer',
-      background: '$base600',
+
+
+    "&.serviceOne:hover": {
+      "-webkit-box-shadow": "0px 0px 71px 0px rgba(31,127,240,0.5)",
+      "-moz-box-shadow": "0px 0px 71px 0px rgba(31,127,240,0.5)",
+      boxShadow: "0px 0px 30px 0px rgba(31,127,240,0.5)",
+    },
+
+    "&.serviceOTwo:hover": {
+      "-webkit-box-shadow": "0px 0px 71px 0px rgba(60, 184, 108, 0.5)",
+      "-moz-box-shadow": "0px 0px 71px 0px rgba(60, 184, 108, 0.5)",
+      boxShadow: "0px 0px 30px 0px rgba(60, 184, 108, 0.5)",
+    },
+
+    "&.serviceThree:hover": {
+      "-webkit-box-shadow": "0px 0px 71px 0px rgba(247, 50, 110, 0.5)",
+      "-moz-box-shadow": "0px 0px 71px 0px rgba(247, 50, 110, 0.5)",
+      boxShadow: "0px 0px 30px 0px rgba(247, 50, 110, 0.5)",
+    },
+
+    "&:hover": {
+      cursor: "pointer",
+      background: "$base600",
       figure: {
         img: {
           animation: `1.5s ${translateIconY} infinite ease-in-out`,
-        }
+        },
       },
-    }
+    },
   },
 });

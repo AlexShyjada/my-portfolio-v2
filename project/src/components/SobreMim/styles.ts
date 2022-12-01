@@ -11,13 +11,13 @@ export const rotate = keyframes({
 });
 
 export const translateXOnPhotos = keyframes({
-  '0%': {
-    transform: 'translateX(0)'
+  "0%": {
+    transform: "translateX(0)",
   },
-  '100%': {
-    transform: 'translateX(-100%)'
-  }
-})
+  "100%": {
+    transform: "translateX(-100%)",
+  },
+});
 
 export const StyledSobreMim = styled("section", {
   display: "flex",
@@ -152,28 +152,25 @@ export const PhotosContainer = styled("div", {
 });
 
 export const AnimatedPhotosContainer = styled("div", {
-  width: '100%',
-  overflow: 'hidden',
+  width: "100%",
+  overflow: "hidden",
   display: "flex",
 
-  'div.photosContainer': {
+  "div.photosContainer": {
     display: "flex",
     justifyContent: "flex-start",
     alignItems: "center",
-    gap: '1.5rem',
-    paddingLeft: '48px',
-    animation: `${translateXOnPhotos} 200s infinite alternate linear`,
+    gap: "1.5rem",
+    paddingLeft: "48px",
+    animation: `${translateXOnPhotos} 50s infinite alternate linear`,
 
+    img: {
+      filter: "saturate(0%)",
+      transition: "0.3s",
+
+      "&:hover": {
+        filter: "saturate(100%)",
+      },
+    },
   },
-
-
-  img: {
-    filter: 'saturate(0%)',
-    transition: '0.3s',
-    
-    '&:hover':{
-      filter: 'saturate(100%)',
-    }
-  }
-
 });

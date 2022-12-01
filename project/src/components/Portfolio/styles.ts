@@ -29,16 +29,16 @@ export const StyledHeaderPortifolio = styled("header", {
     gap: "0.25rem",
 
     "span.subtitle": {
-      fontWeight: "500",
-      fontSize: "16px",
-      lineHeight: "32px",
+      fontWeight: "$medium",
+      fontSize: "$body1",
+      lineHeight: "3rem",
       letterSpacing: "2.2px",
       textTransform: "uppercase",
       color: "$base400",
     },
     "h2.secundaryTitle": {
-      fontWeight: "700",
-      fontSize: "3rem",
+      fontWeight: "$bold",
+      fontSize: "$h1",
       lineHeight: "4rem",
       color: "$base100",
     },
@@ -107,14 +107,14 @@ export const StyledCardPortfolio = styled("article", {
 
       "h3.tertiaryTitle": {
         fontWeight: "$bold",
-        fontSize: "1.5rem",
+        fontSize: "$h3",
         lineHeight: "2rem",
         color: "$base100",
       },
 
       "span.postDescription": {
         fontWeight: "$regular",
-        fontSize: "1rem",
+        fontSize: "$body1",
         lineHeight: "1.5rem",
         letterSpacing: "0.2px",
         color: "$base100",

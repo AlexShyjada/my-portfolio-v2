@@ -61,7 +61,7 @@ export function SobreMim() {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <g clip-path="url(#clip0_1554_1036)">
+            <g clipPath="url(#clip0_1554_1036)">
               <path
                 fill-rule="evenodd"
                 clip-rule="evenodd"
@@ -81,6 +81,19 @@ export function SobreMim() {
         </PhotosContainer>
       </MainInofrmationContainer>
       <AnimatedPhotosContainer>
+        <div className="photosContainer">
+          {myLifePhotos.map((photo) => {
+            return (
+              <Image
+                src={photo.src}
+                width={photo.width}
+                height={photo.height}
+                alt={photo.alt}
+                key={photo.id}
+              />
+            );
+          })}
+        </div>
         <div className="photosContainer">
           {myLifePhotos.map((photo) => {
             return (

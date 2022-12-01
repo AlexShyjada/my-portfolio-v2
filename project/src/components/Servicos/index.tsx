@@ -45,7 +45,7 @@ export function Servicos() {
         </StyledHeder>
 
         <ServicesList>
-          <li className="serviceCard">
+          <li className="serviceCard serviceOne">
             <figure>
               <Image
                 src="/serviceDesignInterfacesWeb.svg"
@@ -64,7 +64,7 @@ export function Servicos() {
               focado em seu público e forte apelo visual.
             </span>
           </li>
-          <li className="serviceCard">
+          <li className="serviceCard serviceOTwo">
             <figure>
               <Image
                 src="/serviceDesignMobileApp.svg"
@@ -83,7 +83,7 @@ export function Servicos() {
               usabilidade e objetivos de seu negocio.
             </span>
           </li>
-          <li className="serviceCard">
+          <li className="serviceCard serviceThree">
             <figure>
               <Image
                 src="/serviceWebsiteDeveloping.svg"

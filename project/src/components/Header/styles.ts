@@ -37,7 +37,7 @@ export const Button = styled("button", {
     gap: "0.5rem",
 
     background: "rgba(255, 255, 255, 0.03)",
-    padding: "0px 12px",
+    padding: "0px 0.75rem",
     color: "$base100",
     borderRadius: "0.25rem",
     transition: "0.3s",

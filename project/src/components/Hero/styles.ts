@@ -106,7 +106,7 @@ export const StyledTextContainer = styled("div", {
     alignItems: "center",
     gap: "0.5rem",
 
-    fontSize: '1.25rem',
+    fontSize: '$h4',
     lineHeight: '2rem',
     textAlign: 'center',
     letterSpacing: '0.2px',
@@ -116,7 +116,7 @@ export const StyledTextContainer = styled("div", {
   
   'h1.mainTitle': {
     fontWeight: "$bold",
-    fontSize: "3rem",
+    fontSize: "$h1",
     lineHeight: "4rem",
     textAlign: "center",
     color: "$base100",
@@ -128,7 +128,7 @@ export const StyledTextContainer = styled("div", {
     gap: "0.5rem",
   
     fontWeight: '$regular',
-    fontSize: '1.25rem',
+    fontSize: '$h4',
     lineHeight: '2rem',
     textAlign: 'center',
     letterSpacing: '0.2px',
@@ -148,7 +148,7 @@ export const StyledButtonContato = styled("button", {
     alignItems: "center",
 
     fontWeight: "$bold",
-    fontSize: "0.85rem",
+    fontSize: "$body2",
     lineHeight: "1.25rem",
     letterSpacing: "0.17px",
     textTransform: "uppercase",
